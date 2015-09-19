@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         //crear y definir boton de ingreso
         bin.setOnClickListener(new View.OnClickListener() {
             @Override
+            //métodos de el boton
             public void onClick(View v) {
 
             }
