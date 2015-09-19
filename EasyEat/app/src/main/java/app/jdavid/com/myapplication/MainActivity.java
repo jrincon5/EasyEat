@@ -1,4 +1,4 @@
-package com.example.julian.easyeat;
+package app.jdavid.com.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
