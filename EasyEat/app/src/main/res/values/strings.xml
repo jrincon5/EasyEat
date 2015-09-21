@@ -6,4 +6,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_escanear">escanearActivity</string>
+    <string name="title_activity_aliados">aliados</string>
+    <string name="title_activity_menu">menuActivity</string>
+    <string name="title_activity_pedidos">pedidosActivity</string>
+    <string name="title_activity_factura">facturaActivity</string>
 </resources>

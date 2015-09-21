@@ -25,7 +25,26 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".aliados"
+            android:label="@string/title_activity_aliados" >
+        </activity>
+        <activity
+            android:name=".aliadosActivity"
+            android:label="@string/title_activity_aliados" >
+        </activity>
+        <activity
+            android:name=".menuActivity"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".pedidosActivity"
+            android:label="@string/title_activity_pedidos" >
+        </activity>
+        <activity
+            android:name=".facturaActivity"
+            android:label="@string/title_activity_factura" >
+        </activity>
     </application>
 
 </manifest>
