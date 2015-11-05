@@ -11,7 +11,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Override
+
+    // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -19,8 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button bin = (Button) findViewById(R.id.boton_ingresar);
         bin.setOnClickListener(this);
         //crear y definir boton de ingreso
-        
-
     }
 
 
@@ -39,9 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -54,7 +50,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(scan);
                 break;
         }
-
-
     }
 }

@@ -2,23 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.jdavid.com.myapplication" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher"
         android:label="@string/app_name"
+        android:logo="@mipmap/launcher"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="Easy Eat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission
+                android:name="android.permission.FLASHLIGHT"
+                android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+                android:protectionLevel="normal" />
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature
+                android:name="android.hardware.camera.autofocus"
+                android:required="false" />
+            <uses-feature
+                android:name="android.hardware.camera.flash"
+                android:required="false" />
         </activity>
         <activity
             android:name=".escanearActivity"
-            android:label="@string/title_activity_escanear" >
+            android:label="Escanear" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,24 +44,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".aliados"
-            android:label="@string/title_activity_aliados" >
-        </activity>
-        <activity
             android:name=".aliadosActivity"
-            android:label="@string/title_activity_aliados" >
+            android:label="Aliados" >
         </activity>
         <activity
             android:name=".menuActivity"
-            android:label="@string/title_activity_menu" >
+            android:label="Menú" >
         </activity>
         <activity
-            android:name=".pedidosActivity"
-            android:label="@string/title_activity_pedidos" >
-        </activity>
-        <activity
-            android:name=".facturaActivity"
-            android:label="@string/title_activity_factura" >
+            android:name=".subMenuActivity"
+            android:label="@string/title_activity_sub_menu" >
         </activity>
     </application>
 

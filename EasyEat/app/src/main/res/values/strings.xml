@@ -10,4 +10,23 @@
     <string name="title_activity_menu">menuActivity</string>
     <string name="title_activity_pedidos">pedidosActivity</string>
     <string name="title_activity_factura">facturaActivity</string>
+    <string name="title_activity_frisby_">Frisby_Activity</string>
+    <string name="title_activity_rancherito_">Rancherito_Activity</string>
+    <string name="title_activity_ejemplo_rest">EjemploRest</string>
+
+    <string name="id_label">The ID is</string>
+    <string name="id_value">[id]</string>
+    <string name="content_label">The Content is</string>
+    <string name="content_value">[content]</string>
+    <string name="action_refresh">Refresh</string>
+
+    <string name="idcliente">IdCliente</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Telefono</string>
+    <string name="ins">Ins</string>
+    <string name="act">Act</string>
+    <string name="obt">Obt</string>
+    <string name="lis">Lis</string>
+    <string name="title_activity_sub_menu">subMenu</string>
+
 </resources>

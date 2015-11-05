@@ -3,16 +3,13 @@ package app.jdavid.com.myapplication;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class escanearActivity extends ActionBarActivity implements View.OnClickListener {
-
+public class escanearActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,30 +41,30 @@ public class escanearActivity extends ActionBarActivity implements View.OnClickL
                 scan = new Intent(escanearActivity.this,menuActivity.class);
                 startActivity(scan);
                 return true;
-            case R.id.action_pedidos:
-                scan = new Intent(escanearActivity.this,pedidosActivity.class);
-                startActivity(scan);
-                return true;
-            case R.id.action_factura:
-                scan = new Intent(escanearActivity.this,facturaActivity.class);
-                startActivity(scan);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+    /*
+    *
+    * */
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0) {
-
             if (resultCode == RESULT_OK) {
                 String contents = data.getStringExtra("SCAN_RESULT");
-                Toast toast1 =
-                        Toast.makeText(getApplicationContext(),
-                                contents, Toast.LENGTH_SHORT);
-
-                toast1.show();
+                menuActivity m=new menuActivity();
+                m.setRestaurante(contents);
+                if (contents.equals("Bigos")){
+                    Intent scanbigos = new Intent(escanearActivity.this,menuActivity.class);
+                    startActivity(scanbigos);
+                }else{
+                    if(contents.equals("Frisby")){
+                        Intent scanfrisby = new Intent(escanearActivity.this,menuActivity.class);
+                        startActivity(scanfrisby);
+                    }
+                }
             }
             if(resultCode == RESULT_CANCELED){
                 //handle cancel

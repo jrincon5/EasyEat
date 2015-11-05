@@ -1,25 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="app.jdavid.com.myapplication.escanearActivity">
+    tools:context="app.jdavid.com.myapplication.aliadosActivity">
 
+    <item android:id="@+id/action_buscar"
+        android:title=""
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
 
     <item android:id="@+id/action_escanear" android:title="Escanear"
         android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_aliados" android:title="Aliados"
-        android:orderInCategory="100" app:showAsAction="never"
-        android:enabled="true"/>
+        android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_menu" android:title="Menú"
-        android:orderInCategory="100" app:showAsAction="never"
-        android:enabled="false"/>
+        android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_pedidos" android:title="Pedidos"
-        android:orderInCategory="100" app:showAsAction="never"
-        android:enabled="false"/>
+        android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_factura" android:title="Factura"
-        android:orderInCategory="100" app:showAsAction="never"
-        android:enabled="false"/>
+        android:orderInCategory="100" app:showAsAction="never" />
 </menu>
