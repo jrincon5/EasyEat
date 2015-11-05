@@ -48,46 +48,78 @@ public class subMenuActivity extends AppCompatActivity {
     public ArrayList<String> pedidos = new ArrayList();
     public void crearDatos(String restaurante) {
         if(restaurante.equals("Bigos")){
-            final GrupoItems grupo0 = new GrupoItems("Desayunos");
-            grupo0.subItem.add("Arepa con quesito $1500");
-            grupo0.subFoto.add(R.drawable.bigos);
-            grupo0.subItem.add("Arepa con huevo $2200");
-            grupo0.subFoto.add(R.drawable.bigos);
-            grupos.append(0, grupo0);
-            GrupoItems grupo1 = new GrupoItems("Almuerzos");
-            grupo1.subItem.add("Menú del dia");
-            grupo1.subFoto.add(R.drawable.bigos);
-            grupo1.subItem.add("Pastas $6560");
-            grupo1.subFoto.add(R.drawable.bigos);
-            grupo1.subItem.add("Lasaña $8650");
-            grupo1.subFoto.add(R.drawable.bigos);
-            grupos.append(1, grupo1);
-            GrupoItems grupo2 = new GrupoItems("Otros");
-            grupo2.subItem.add("Jamón, queso y ananá $9950");
-            grupo2.subFoto.add(R.drawable.bigos);
-            grupo2.subItem.add("Pollo $9500");
-            grupo2.subFoto.add(R.drawable.bigos);
-            grupo2.subItem.add("Aceitunas $4500");
-            grupo2.subFoto.add(R.drawable.bigos);
-            grupos.append(2, grupo2);
+            if(categoria.equals("Combos")){
+                GrupoItems grupo0 = new GrupoItems("Combo 1");
+                grupo0.subItem.add("$12000 \n 2 presas de pollo con frijoles");
+                grupo0.subFoto.add(R.drawable.bigoscomida);
+                grupos.append(0, grupo0);
+                GrupoItems grupo1 = new GrupoItems("Combo 1 Ensalada de Papa");
+                grupo1.subItem.add("$18800 \n ensalada de papas con almuerzo");
+                grupo1.subFoto.add(R.drawable.bigos);
+                grupos.append(1, grupo1);
+                GrupoItems grupo2 = new GrupoItems("Combo 2 Ensalada de Repollo");
+                //grupo2.subItem.add("Frispicada  $39900");
+                //grupo1.subFoto.add(R.drawable.frisby);
+                grupo2.subItem.add("$14900 \n ensalada deliciosa con pechuga de pollo");
+                grupo2.subFoto.add(R.drawable.bigos);
+                //grupo2.subItem.add("Frisburrito Ranch   $6500");
+                //grupo2.subFoto.add(R.drawable.bigos);
+                grupos.append(2, grupo2);
+            }
+            if(categoria.equals("Emparedados")){
+                GrupoItems grupo0 = new GrupoItems("Combo 1");
+                grupo0.subItem.add("$12000 \n 2 presas de pollo con frijoles");
+                grupo0.subFoto.add(R.drawable.bigoscomida);
+                grupos.append(0, grupo0);
+                GrupoItems grupo1 = new GrupoItems("Combo 1 Ensalada de Papa");
+                grupo1.subItem.add("$18800 \n ensalada de papas con almuerzo");
+                grupo1.subFoto.add(R.drawable.bigos);
+                grupos.append(1, grupo1);
+                GrupoItems grupo2 = new GrupoItems("Combo 2 Ensalada de Repollo");
+                //grupo2.subItem.add("Frispicada  $39900");
+                //grupo1.subFoto.add(R.drawable.frisby);
+                grupo2.subItem.add("$14900 \n ensalada deliciosa con pechuga de pollo");
+                grupo2.subFoto.add(R.drawable.bigos);
+                //grupo2.subItem.add("Frisburrito Ranch   $6500");
+                //grupo2.subFoto.add(R.drawable.bigos);
+                grupos.append(2, grupo2);
+            }
         }
 
         if(restaurante.equals("Frisby")) {
             if(categoria.equals("Combos")){
                 GrupoItems grupo0 = new GrupoItems("Combo 1 Ensalada de Repollo");
-                grupo0.subItem.add("2 presas de pollo apanadado crocantes jugosas deliciosas, acompañadas de arroz, ensalada de repollo y salsa");
+                grupo0.subItem.add("$12000 \n 2 presas de pollo apanadado crocantes, acompañadas de arroz, ensalada de repollo y salsa");
                 grupo0.subFoto.add(R.drawable.comboensaladarepollo);
                 grupos.append(0, grupo0);
                 GrupoItems grupo1 = new GrupoItems("Combo 1 Ensalada de Papa");
-                grupo1.subItem.add("Combo Ensalada de repollo          $18800");
+                grupo1.subItem.add("$18800 \n muslo de pollo apanado con papas");
                 grupo1.subFoto.add(R.drawable.frisby);
                 grupos.append(1, grupo1);
                 GrupoItems grupo2 = new GrupoItems("Combo 2 Ensalada de Repollo");
-                grupo2.subItem.add("Frispicada  $39900");
-                grupo1.subFoto.add(R.drawable.frisby);
-                grupo2.subItem.add("Frisbandeja    $14900");
+                //grupo2.subItem.add("Frispicada  $39900");
+                //grupo1.subFoto.add(R.drawable.frisby);
+                grupo2.subItem.add("$14900 ensalada deliciosa con pechuga de pollo");
                 grupo2.subFoto.add(R.drawable.frisby);
-                grupo2.subItem.add("Frisburrito Ranch   $6500");
+                //grupo2.subItem.add("Frisburrito Ranch   $6500");
+                grupo2.subFoto.add(R.drawable.frisby);
+                grupos.append(2, grupo2);
+            }
+            if(categoria.equals("Pollo")){
+                GrupoItems grupo0 = new GrupoItems("Combo Muslos");
+                grupo0.subItem.add("$12000 \n 4 muslos de pollo apanadado crocantes");
+                grupo0.subFoto.add(R.drawable.comboensaladarepollo);
+                grupos.append(0, grupo0);
+                GrupoItems grupo1 = new GrupoItems("Combo Pechuga");
+                grupo1.subItem.add("$18800 \n pechugas apanadas de pollo con papas");
+                grupo1.subFoto.add(R.drawable.frisby);
+                grupos.append(1, grupo1);
+                GrupoItems grupo2 = new GrupoItems("Combo 2 Ensalada de Repollo");
+                //grupo2.subItem.add("Frispicada  $39900");
+                //grupo1.subFoto.add(R.drawable.frisby);
+                grupo2.subItem.add("$14900 ensalada deliciosa con pechuga de pollo");
+                grupo2.subFoto.add(R.drawable.frisby);
+                //grupo2.subItem.add("Frisburrito Ranch   $6500");
                 grupo2.subFoto.add(R.drawable.frisby);
                 grupos.append(2, grupo2);
             }
@@ -103,7 +135,7 @@ public class subMenuActivity extends AppCompatActivity {
         TabHost tbh = (TabHost) findViewById(R.id.tabHost);
         tbh.setup();
         // Tab Pestaña 1
-        TabSpec tb1=tbh.newTabSpec("Tab1");
+        TabSpec tb1 = tbh.newTabSpec("Tab1");
         tb1.setIndicator("Productos");
         tb1.setContent(R.id.tab1);
         tbh.addTab(tb1);
@@ -117,7 +149,7 @@ public class subMenuActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         // Tab Pestaña 2
-        TabSpec tb2=tbh.newTabSpec("Tab2");
+        TabSpec tb2 = tbh.newTabSpec("Tab2");
         tb2.setIndicator("Carrito");
         tb2.setContent(R.id.tab2);
         tbh.addTab(tb2);
@@ -132,24 +164,24 @@ public class subMenuActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(), getTituloMenu(i), Toast.LENGTH_SHORT).show();
             }
         });
-        Button button = (Button)findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Dio",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Se realizo el pedido", Toast.LENGTH_SHORT).show();
                 String aux = "";
-                for(String text:pedidos){
-                    aux+=pedidos+"\n";
+                for (String text : pedidos) {
+                    aux += pedidos + "\n";
                 }
-                Toast.makeText(getApplicationContext(),aux,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), aux, Toast.LENGTH_SHORT).show();
                 Gson gson = new Gson();
                 String text = gson.toJson(pedidos);
-                if(text==null){
-                    Log.i("SE CAGO","EL toJson");
+                if (text == null) {
+                    Log.i("SE CAGO", "EL toJson");
                 }
                 OkHttpClient client = new OkHttpClient();
 
-                try{
+                try {
                     post("http://easyeatserver.herokuapp.com/echo", text, new Callback() {
                         @Override
                         public void onFailure(Request request, IOException throwable) {
@@ -168,20 +200,50 @@ public class subMenuActivity extends AppCompatActivity {
                         }
                     }, client);
 
-                }catch (IOException e){
-                    Toast.makeText(getApplicationContext(),"Se cago esto",Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    Toast.makeText(getApplicationContext(), "Se cago esto", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        titulos.append(0, "Combos"); imagenes.append(0,R.drawable.frisby);
-        titulos.append(1,"Pollo"); imagenes.append(1,R.drawable.frisby);
-        titulos.append(2,"Frisdelicias"); imagenes.append(2,R.drawable.frisby);
-        titulos.append(3,"Linea Liviana"); imagenes.append(3,R.drawable.frisby);
-        titulos.append(4,"Frisby Kids"); imagenes.append(4,R.drawable.frisby);
-        titulos.append(5,"Acompañeamientos"); imagenes.append(5,R.drawable.frisby);
-        titulos.append(6,"Bebidas"); imagenes.append(6,R.drawable.frisby);
-        titulos.append(7,"Postres"); imagenes.append(7,R.drawable.frisby);
+        if (restaurante.equals("Frisby")) {
+            titulos.append(0, "Combos");
+            imagenes.append(0, R.drawable.frisby);
+            titulos.append(1, "Pollo");
+            imagenes.append(1, R.drawable.frisby);
+            titulos.append(2, "Frisdelicias");
+            imagenes.append(2, R.drawable.frisby);
+            titulos.append(3, "Linea Liviana");
+            imagenes.append(3, R.drawable.frisby);
+            titulos.append(4, "Frisby Kids");
+            imagenes.append(4, R.drawable.frisby);
+            titulos.append(5, "Acompañamientos");
+            imagenes.append(5, R.drawable.frisby);
+            titulos.append(6, "Bebidas");
+            imagenes.append(6, R.drawable.frisby);
+            titulos.append(7, "Postres");
+            imagenes.append(7, R.drawable.frisby);
+        }
+        if(restaurante.equals("Bigos")) {
+            titulos.append(0, "Combos");
+            imagenes.append(0, R.drawable.bigos);
+            titulos.append(1, "Emparedados");
+            imagenes.append(1, R.drawable.bigos);
+            titulos.append(2, "Especiales");
+            imagenes.append(2, R.drawable.bigos);
+            titulos.append(3, "Linea Liviana");
+            imagenes.append(3, R.drawable.bigos);
+            titulos.append(4, "Menu del día");
+            imagenes.append(4, R.drawable.bigos);
+            titulos.append(5, "Adiciones");
+            imagenes.append(5, R.drawable.bigos);
+            titulos.append(6, "Bebidas");
+            imagenes.append(6, R.drawable.bigos);
+            titulos.append(7, "Postres");
+            imagenes.append(7, R.drawable.bigos);
+        }
     }
+
+    //modificaciones
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
