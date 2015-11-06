@@ -35,9 +35,9 @@ public class menuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         crearDatos(restaurante);
-
+        //String imagen = restaurante.toLowerCase();
         ImageView imgImg = (ImageView) findViewById(R.id.ImagenMenuTxT);  // cambio
-        imgImg.setImageResource(R.drawable.bigos);  // cambio
+        imgImg.setImageResource(R.drawable.frisby);  // cambio
         TextView txtTitulo = (TextView) findViewById(R.id.TituloMenuTxT);
         txtTitulo.setText("    " + restaurante);
 
@@ -68,9 +68,14 @@ public class menuActivity extends AppCompatActivity {
 
     public void crearDatos(String restaurante) {
         if(restaurante.equals("Bigos")){
-            titulos.append(0, "Desayunos"); imagenes.append(0,R.drawable.rancherito);
-            titulos.append(1,"Almuerzos"); imagenes.append(1,R.drawable.bigos);
-            titulos.append(2,"Cositas"); imagenes.append(2,R.drawable.elcorral);
+            titulos.append(0, "Combos");imagenes.append(0, R.drawable.bigos);
+            titulos.append(1, "Emparedados");imagenes.append(1, R.drawable.bigos);
+            titulos.append(2, "Especiales");imagenes.append(2, R.drawable.bigos);
+            titulos.append(3, "Linea Liviana");imagenes.append(3, R.drawable.bigos);
+            titulos.append(4, "Menu del día");imagenes.append(4, R.drawable.bigos);
+            titulos.append(5, "Adiciones");imagenes.append(5, R.drawable.bigos);
+            titulos.append(6, "Bebidas");imagenes.append(6, R.drawable.bigos);
+            titulos.append(7, "Postres");imagenes.append(7, R.drawable.bigos);
         }
         if(restaurante.equals("Frisby")){
             titulos.append(0, "Combos"); imagenes.append(0,R.drawable.frisby);
@@ -78,7 +83,7 @@ public class menuActivity extends AppCompatActivity {
             titulos.append(2,"Frisdelicias"); imagenes.append(2,R.drawable.frisby);
             titulos.append(3,"Linea Liviana"); imagenes.append(3,R.drawable.frisby);
             titulos.append(4,"Frisby Kids"); imagenes.append(4,R.drawable.frisby);
-            titulos.append(5,"Acompañeamientos"); imagenes.append(5,R.drawable.frisby);
+            titulos.append(5,"Acompañamientos"); imagenes.append(5,R.drawable.frisby);
             titulos.append(6,"Bebidas"); imagenes.append(6,R.drawable.frisby);
             titulos.append(7,"Postres"); imagenes.append(7,R.drawable.frisby);
         }
