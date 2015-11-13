@@ -1,4 +1,4 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.MediaType;
@@ -27,9 +26,9 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.FormEncodingBuilder;
-
 import java.io.IOException;
 import java.util.ArrayList;
+import app.jdavid.com.Controladores.R;
 
 public class subMenuActivity extends AppCompatActivity {
     public static final MediaType JSON
@@ -46,7 +45,8 @@ public class subMenuActivity extends AppCompatActivity {
     public String getRestaurante() {return restaurante;}
     public void setRestaurante(String restaurante) {this.restaurante = restaurante;}
     public ArrayList<String> pedidos = new ArrayList();
-    public void crearDatos(String restaurante) {
+
+    public void crearDatos(String restaurante){
         if(restaurante.equals("Bigos")){
             if(categoria.equals("Combos")){
                 GrupoItems grupo0 = new GrupoItems("Combo 1");
@@ -65,8 +65,7 @@ public class subMenuActivity extends AppCompatActivity {
                 //grupo2.subItem.add("Frisburrito Ranch   $6500");
                 //grupo2.subFoto.add(R.drawable.bigos);
                 grupos.append(2, grupo2);
-            }
-            if(categoria.equals("Emparedados")){
+            }else if(categoria.equals("Emparedados")){
                 GrupoItems grupo0 = new GrupoItems("Combo 1");
                 grupo0.subItem.add("$12000 \n 2 presas de pollo con frijoles");
                 grupo0.subFoto.add(R.drawable.bigoscomida);
@@ -85,7 +84,6 @@ public class subMenuActivity extends AppCompatActivity {
                 grupos.append(2, grupo2);
             }
         }
-
         if(restaurante.equals("Frisby")) {
             if(categoria.equals("Combos")){
                 GrupoItems grupo0 = new GrupoItems("Combo 1 Ensalada de Repollo");
@@ -131,10 +129,11 @@ public class subMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_menu);
         crearDatos(restaurante);
+        LlenarRestaurantes(restaurante);
         // Tab
         TabHost tbh = (TabHost) findViewById(R.id.tabHost);
         tbh.setup();
-        // Tab Pestaña 1
+        // TAB Pestaña 1
         TabSpec tb1 = tbh.newTabSpec("Tab1");
         tb1.setIndicator("Productos");
         tb1.setContent(R.id.tab1);
@@ -148,7 +147,7 @@ public class subMenuActivity extends AppCompatActivity {
         ExpandableListViewAdapter adapter = new ExpandableListViewAdapter(this, grupos);
         listView.setAdapter(adapter);
 
-        // Tab Pestaña 2
+        // TAB Pestaña 2
         TabSpec tb2 = tbh.newTabSpec("Tab2");
         tb2.setIndicator("Carrito");
         tb2.setContent(R.id.tab2);
@@ -180,32 +179,40 @@ public class subMenuActivity extends AppCompatActivity {
                     Log.i("SE CAGO", "EL toJson");
                 }
                 OkHttpClient client = new OkHttpClient();
-
                 try {
                     post("http://easyeatserver.herokuapp.com/echo", text, new Callback() {
                         @Override
                         public void onFailure(Request request, IOException throwable) {
                             // Something went wrong
                         }
-
                         @Override
                         public void onResponse(Response response) throws IOException {
                             if (response.isSuccessful()) {
                                 String responseStr = response.body().string();
                                 //Toast.makeText(getApplicationContext(),responseStr, Toast.LENGTH_SHORT).show();
                                 // Do what you want to do with the response.
-                            } else {
+                            }else{
                                 // Request not successful
                             }
                         }
-                    }, client);
-
+                    },client);
                 } catch (IOException e) {
                     Toast.makeText(getApplicationContext(), "Se cago esto", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        if (restaurante.equals("Frisby")) {
+
+        /* Evento para cambiar las pestañas
+        tbh.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                Log.i("AndroidTabsDemo", "Pulsada pestaña: " + tabId);
+            }
+        });*/
+    }
+
+    void LlenarRestaurantes(String rest){
+        if(rest.equals("Frisby")){
             titulos.append(0, "Combos");
             imagenes.append(0, R.drawable.frisby);
             titulos.append(1, "Pollo");
@@ -222,8 +229,8 @@ public class subMenuActivity extends AppCompatActivity {
             imagenes.append(6, R.drawable.frisby);
             titulos.append(7, "Postres");
             imagenes.append(7, R.drawable.frisby);
-        }
-        if(restaurante.equals("Bigos")) {
+        }else
+        if(rest.equals("Bigos")) {
             titulos.append(0, "Combos");
             imagenes.append(0, R.drawable.bigos);
             titulos.append(1, "Emparedados");
@@ -242,8 +249,6 @@ public class subMenuActivity extends AppCompatActivity {
             imagenes.append(7, R.drawable.bigos);
         }
     }
-
-    //modificaciones
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

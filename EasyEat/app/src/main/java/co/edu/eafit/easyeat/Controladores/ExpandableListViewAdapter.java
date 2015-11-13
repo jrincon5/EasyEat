@@ -1,8 +1,7 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import app.jdavid.com.Controladores.R;
 
 /**
  * Created by Julian on 06/10/2015.

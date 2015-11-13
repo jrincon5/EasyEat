@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="app.jdavid.com.myapplication" >
+    package="app.jdavid.com.Controladores" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:logo="@mipmap/launcher"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="app.jdavid.com.Controladores.MainActivity"
             android:label="Easy Eat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
                 android:required="false" />
         </activity>
         <activity
-            android:name=".escanearActivity"
+            android:name="app.jdavid.com.Controladores.escanearActivity"
             android:label="Escanear" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,15 +44,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".aliadosActivity"
+            android:name="app.jdavid.com.Controladores.aliadosActivity"
             android:label="Aliados" >
         </activity>
         <activity
-            android:name=".menuActivity"
+            android:name="app.jdavid.com.Controladores.menuActivity"
             android:label="Menú" >
         </activity>
         <activity
-            android:name=".subMenuActivity"
+            android:name="app.jdavid.com.Controladores.subMenuActivity"
             android:label="@string/title_activity_sub_menu" >
         </activity>
     </application>

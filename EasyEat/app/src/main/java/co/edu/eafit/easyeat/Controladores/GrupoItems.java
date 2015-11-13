@@ -1,4 +1,4 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 import java.util.ArrayList;
 import java.util.List;

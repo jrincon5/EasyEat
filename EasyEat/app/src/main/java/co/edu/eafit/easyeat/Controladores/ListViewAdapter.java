@@ -1,4 +1,4 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 /**
  * Created by Julian on 22/09/2015.
@@ -11,14 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.util.SparseArray;
+import app.jdavid.com.Controladores.R;
 
 public class ListViewAdapter extends BaseAdapter {
     // Declare Variables
     Context context;
     SparseArray<String> titulos;
     SparseArray<Integer> imagenes;
-    //String[] titulos;
-    //int[] imagenes;
     LayoutInflater inflater;
 
     public ListViewAdapter(Context context, SparseArray<String> titulos, SparseArray<Integer> imagenes) {

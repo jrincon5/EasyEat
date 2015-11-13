@@ -1,4 +1,4 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import app.jdavid.com.Controladores.R;
 
 public class escanearActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
@@ -45,9 +46,6 @@ public class escanearActivity extends AppCompatActivity implements View.OnClickL
                 return super.onOptionsItemSelected(item);
         }
     }
-    /*
-    *
-    * */
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -1,4 +1,4 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,16 +8,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import app.jdavid.com.Controladores.R;
+import app.jdavid.com.Controladores.aliadosActivity;
+import app.jdavid.com.Controladores.escanearActivity;
+import co.edu.eafit.easyeat.Controladores.subMenuActivity;
 
 public class menuActivity extends AppCompatActivity {
-    ListViewAdapter adapter;
+    app.jdavid.com.Controladores.ListViewAdapter adapter;
     private SparseArray<String> titulos=new SparseArray<String>();
     private SparseArray<Integer>imagenes=new SparseArray<Integer>();
     private static String restaurante;
@@ -42,7 +44,7 @@ public class menuActivity extends AppCompatActivity {
         txtTitulo.setText("    " + restaurante);
 
         final ListView lista = (ListView) findViewById(R.id.Lista_Menu);
-        adapter = new ListViewAdapter(this, titulos, imagenes);
+        adapter = new app.jdavid.com.Controladores.ListViewAdapter(this, titulos, imagenes);
         lista.setAdapter(adapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -100,11 +102,11 @@ public class menuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_escanear:
-                Intent scan = new Intent(menuActivity.this,escanearActivity.class);
+                Intent scan = new Intent(menuActivity.this, escanearActivity.class);
                 startActivity(scan);
                 return true;
             case R.id.action_aliados:
-                scan = new Intent(menuActivity.this,aliadosActivity.class);
+                scan = new Intent(menuActivity.this, aliadosActivity.class);
                 startActivity(scan);
                 return true;
             case R.id.action_menu:

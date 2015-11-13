@@ -1,6 +1,5 @@
-package app.jdavid.com.myapplication;
+package co.edu.eafit.easyeat.Controladores;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import app.jdavid.com.Controladores.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-    // @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bin.setOnClickListener(this);
         //crear y definir boton de ingreso
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
